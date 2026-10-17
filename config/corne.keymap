@@ -59,10 +59,10 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   &kp(Q) &kp(W) &kp(F) &kp(P) &kp(B)     &kp(J)   &kp(L)  &kp(U)     &kp(Y)     &kp(SQT)
+   &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &kp U     &kp Y     &kp SQT
    &hml LGUI A   &hml LALT R   &hml LCRTL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCRTL E  &hmr LALT I   &hmr LGUI O
-   &kp(Z) &kp(X) &kp(C) &kp(D) &kp(V)     &kp(K)   &kp(H)  &kp COMMA  &kp DOT  &kp(SLASH)
-        &kp ESC &lt 1 BSPC &kp TAB     &kp(RET) &lt 2 SPACE  &kp DEL
+   &kp Z &kp X &kp C &kp D &kp V     &kp K   &kp H  &kp COMMA  &kp DOT  &kp SLASH
+        &kp ESC &lt 1 BSPC &kp TAB     &kp RET &lt 2 SPACE  &kp DEL
                         >;
                 };
 
