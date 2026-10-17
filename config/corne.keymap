@@ -40,7 +40,7 @@
    AS(Q) AS(W) AS(F) AS(P) AS(B)     AS(J)   AS(L)  AS(U)     AS(Y)     AS(SQT)
    AS(A) AS(R) AS(S) AS(T) AS(G)     AS(M)   AS(N)  AS(E)     AS(I)     AS(O)
    AS(Z) AS(X) AS(C) AS(D) AS(V)     AS(K)   AS(H)  &kp COMMA  &kp DOT  AS(SLASH)
-        &kp ESC &kp SPACE &kp TAB     AS(RET) &kp BSPC  &kp DEL
+        &kp ESC &mt 1 SPACE &kp TAB     AS(RET) &mt 2 BSPC  &kp DEL
                         >;
                 };
 
