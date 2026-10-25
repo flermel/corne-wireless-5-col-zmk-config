@@ -48,50 +48,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        umlaut: umlaut {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&kp>;
+        };
         
-        umlaut_a: umlaut_a {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &uc 0x00E4 0x00C4>;
-        };
-
-        umlaut_o: umlaut_o {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &uc 0x00F6 0x00D6>;
-        };
-
-        umlaut_u: umlaut_u {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &uc 0x00FC 0x00DC>;
-        };
-
-        // Tap letter / hold umlaut
-        a_umlaut: a_umlaut {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            bindings = <&umlaut_a>, <&kp>;
-        };
-
-        o_umlaut: o_umlaut {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            bindings = <&umlaut_o>, <&kp>;
-        };
-
-        u_umlaut: u_umlaut {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            bindings = <&umlaut_u>, <&kp>;
-     
-        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -104,8 +68,8 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &u_umlaut 0 U     &kp Y     &kp SQT
-   &a_umlaut 0 A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &o_umlaut 0 O
+   &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &umlaut RA(Y) U     &kp Y     &kp SQT
+   &umlaut RA(Q) A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &umlaut RA(P) O 
    &kp Z &kp X &kp C &kp D &kp V     &kp K   &kp H  &kp COMMA  &kp DOT  &kp SLASH
         &kp ESC &lt 1 BSPC &kp TAB     &kp RET &lt 2 SPACE  &kp DEL
                         >;
