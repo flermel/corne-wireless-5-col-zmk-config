@@ -47,6 +47,50 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        
+        umlaut_a: umlaut_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &uc 0x00E4 0x00C4>;
+        };
+
+        umlaut_o: umlaut_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &uc 0x00F6 0x00D6>;
+        };
+
+        umlaut_u: umlaut_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &uc 0x00FC 0x00DC>;
+        };
+
+        // Tap letter / hold umlaut
+        a_umlaut: a_umlaut {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&umlaut_a>, <&kp>;
+        };
+
+        o_umlaut: o_umlaut {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&umlaut_o>, <&kp>;
+        };
+
+        u_umlaut: u_umlaut {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&umlaut_u>, <&kp>;
+        };
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -60,7 +104,7 @@
                         display-name = "Base";
                         bindings = <
    &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &kp U     &kp Y     &kp SQT
-   &mt A ä   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O
+   &kp A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O
    &kp Z &kp X &kp C &kp D &kp V     &kp K   &kp H  &kp COMMA  &kp DOT  &kp SLASH
         &kp ESC &lt 1 BSPC &kp TAB     &kp RET &lt 2 SPACE  &kp DEL
                         >;
