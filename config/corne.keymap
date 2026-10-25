@@ -104,8 +104,8 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "Base";
                         bindings = <
-   &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &kp U     &kp Y     &kp SQT
-   &kp A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O
+   &kp Q &kp W &kp F  &kp P &kp B     &kp J   &kp L  &u_umlaut 0 U     &kp Y     &kp SQT
+   &a_umlaut 0 A   &hml LALT R   &hml LCTRL S  &hml LSHFT T  &kp G  &kp M         &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &o_umlaut 0 O
    &kp Z &kp X &kp C &kp D &kp V     &kp K   &kp H  &kp COMMA  &kp DOT  &kp SLASH
         &kp ESC &lt 1 BSPC &kp TAB     &kp RET &lt 2 SPACE  &kp DEL
                         >;
